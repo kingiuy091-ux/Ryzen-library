@@ -1,8 +1,8 @@
--- RYZEN LIBRARY V7.6 | TOMATO & SHADERS (by ryzen)
+-- RYZEN LIBRARY V8.1 | FULL TEXT + JERK OFF
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "RYZEN LIBRARY V7.6",
+   Name = "RYZEN LIBRARY V8.1",
    LoadingTitle = "Загрузка...",
    LoadingSubtitle = "by ryzen(dfgghh500)",
    ConfigurationSaving = { Enabled = true, FolderName = "RyzenLibrary", FileName = "Config" },
@@ -15,7 +15,7 @@ local LocalPlayer = Players.LocalPlayer
 local CreatorName = "dfgghh500"
 
 -- ============================================================
--- 1. СИСТЕМА КРЕАТОРА (Радужный ник)
+-- 1. СИСТЕМА КРЕАТОРА
 -- ============================================================
 local function setupCreatorTag()
     if LocalPlayer.Name == CreatorName and LocalPlayer.Character then
@@ -28,7 +28,7 @@ local function setupCreatorTag()
             billboard.StudsOffset = Vector3.new(0, 3, 0)
             billboard.AlwaysOnTop = true
             billboard.Parent = head
-            
+
             local textLabel = Instance.new("TextLabel")
             textLabel.Size = UDim2.new(1, 0, 1, 0)
             textLabel.BackgroundTransparency = 1
@@ -38,7 +38,7 @@ local function setupCreatorTag()
             textLabel.TextStrokeTransparency = 0
             textLabel.TextColor3 = Color3.new(1, 0, 0)
             textLabel.Parent = billboard
-            
+
             task.spawn(function()
                 while billboard.Parent do
                     task.wait(0.1)
@@ -53,13 +53,20 @@ setupCreatorTag()
 LocalPlayer.CharacterAdded:Connect(function() task.wait(1) setupCreatorTag() end)
 
 -- ============================================================
--- 2. О ПРОЕКТЕ (ВЕРНУЛ ВСЁ)
+-- 2. О ПРОЕКТЕ (ПОЛНЫЙ ТЕКСТ)
 -- ============================================================
 local InfoTab = Window:CreateTab("💖 О ПРОЕКТЕ", 4483345998)
+
 InfoTab:CreateParagraph({ 
-    Title = "RYZEN LIBRARY V7.6", 
+    Title = "RYZEN LIBRARY V8.1", 
     Content = "Личная библиотека скриптов для MM2. Собрана из открытых источников. Включает ThunderHub, проверенные хабы и эксклюзивные фишки. Создано для удобства и контента." 
 })
+
+InfoTab:CreateParagraph({ 
+    Title = "ОСОБЕННОСТИ", 
+    Content = "• Работает на Delta/Mobile\n• Без ключей и вирусов\n• Радужный ник CREATOR\n• Внутренний чат\n• Шейдеры и эстетика" 
+})
+
 InfoTab:CreateParagraph({ 
     Title = "ПОДДЕРЖАТЬ ПРОЕКТ", 
     Content = "Если хочешь поддержать автора, вот карта: 2202 2088 2678 5819 ❤️ Спасибо!" 
@@ -97,76 +104,14 @@ EspTab:CreateButton({ Name = "🌊 Waguri MM2", Callback = function() loadstring
 EspTab:CreateButton({ Name = "🌪️ Aether Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aluucardd/MM2/refs/heads/main/Aether%20Hub%20MM2"))() end })
 
 -- ============================================================
--- 6. VISUAL (Шейдеры + Объем)
+-- 6. VISUAL
 -- ============================================================
 local VisualTab = Window:CreateTab("🎨 VISUAL", 4483345998)
-
-VisualTab:CreateButton({ 
-    Name = "Sakura (Розовый)", 
-    Callback = function() 
-        for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end 
-        local cc = Instance.new("ColorCorrectionEffect") 
-        cc.TintColor = Color3.fromRGB(255, 182, 193) 
-        cc.Saturation = 0.3 
-        cc.Parent = game.Lighting 
-    end 
-})
-
-VisualTab:CreateButton({ 
-    Name = "Ad (Красный)", 
-    Callback = function() 
-        for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end 
-        local cc = Instance.new("ColorCorrectionEffect") 
-        cc.TintColor = Color3.fromRGB(255, 0, 0) 
-        cc.Saturation = 0.6 
-        cc.Parent = game.Lighting 
-    end 
-})
-
-VisualTab:CreateButton({ 
-    Name = "Matrix (Зеленый)", 
-    Callback = function() 
-        for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end 
-        local cc = Instance.new("ColorCorrectionEffect") 
-        cc.TintColor = Color3.fromRGB(0, 255, 0) 
-        cc.Saturation = 0.4 
-        cc.Parent = game.Lighting 
-    end 
-})
-
--- НОВЫЙ ШЕЙДЕР: Объемный (Glow + Contrast)
-VisualTab:CreateButton({
-    Name = "Объемный Шейдер (Realistic)",
-    Callback = function()
-        for _, v in pairs(game.Lighting:GetChildren()) do 
-            if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end 
-        end
-        
-        -- Легкое свечение для объема
-        local bloom = Instance.new("BloomEffect")
-        bloom.Intensity = 0.4
-        bloom.Size = 24
-        bloom.Threshold = 0.9
-        bloom.Parent = game.Lighting
-        
-        -- Цветокоррекция для реализма
-        local cc = Instance.new("ColorCorrectionEffect")
-        cc.Brightness = 0.05
-        cc.Contrast = 0.15
-        cc.Saturation = 0.1
-        cc.TintColor = Color3.fromRGB(255, 255, 255)
-        cc.Parent = game.Lighting
-    end
-})
-
-VisualTab:CreateButton({ 
-    Name = "Сброс", 
-    Callback = function() 
-        for _, v in pairs(game.Lighting:GetChildren()) do 
-            if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end 
-        end 
-    end 
-})
+VisualTab:CreateButton({ Name = "Sakura (Розовый)", Callback = function() for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end local cc = Instance.new("ColorCorrectionEffect") cc.TintColor = Color3.fromRGB(255, 182, 193) cc.Saturation = 0.3 cc.Parent = game.Lighting end })
+VisualTab:CreateButton({ Name = "Ad (Красный)", Callback = function() for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end local cc = Instance.new("ColorCorrectionEffect") cc.TintColor = Color3.fromRGB(255, 0, 0) cc.Saturation = 0.6 cc.Parent = game.Lighting end })
+VisualTab:CreateButton({ Name = "Matrix (Зеленый)", Callback = function() for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end local cc = Instance.new("ColorCorrectionEffect") cc.TintColor = Color3.fromRGB(0, 255, 0) cc.Saturation = 0.4 cc.Parent = game.Lighting end })
+VisualTab:CreateButton({ Name = "Объемный Шейдер", Callback = function() for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end local bloom = Instance.new("BloomEffect") bloom.Intensity = 0.4 bloom.Size = 24 bloom.Threshold = 0.9 bloom.Parent = game.Lighting local cc = Instance.new("ColorCorrectionEffect") cc.Brightness = 0.05 cc.Contrast = 0.15 cc.Saturation = 0.1 cc.Parent = game.Lighting end })
+VisualTab:CreateButton({ Name = "Сброс", Callback = function() for _, v in pairs(game.Lighting:GetChildren()) do if v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") then v:Destroy() end end end })
 
 -- ============================================================
 -- 7. ЧАТ
@@ -184,15 +129,34 @@ RyzenTab:CreateButton({ Name = "Звук Бах", Callback = function() local s 
 RyzenTab:CreateButton({ Name = "ХУЙНЯ", Callback = function() Rayfield:Notify({ Title = "ХУЙНЯ", Content = "Ты нажал на хуйню. Поздравляю, ты официально крутой.", Duration = 5 }) end })
 
 -- ============================================================
--- 9. ЛОББИ И МЕГА-МОЛИТВА
+-- 9. ЛОББИ
 -- ============================================================
 local LobbyTab = Window:CreateTab("🏠 ЛОББИ", 4483345998)
 
+-- ВШИТЫЙ JERK OFF (R6+R15)
+LobbyTab:CreateButton({
+    Name = "Jerk Off (R6+R15)",
+    Callback = function()
+        task.spawn(function()
+            local success, err = pcall(function()
+                local humanoid = LocalPlayer.Character.Humanoid
+                if humanoid.RigType == Enum.HumanoidRigType.R15 then
+                    loadstring(game:HttpGet("https://pastefy.app/YZoglOyJ/raw"))()
+                else
+                    loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))() 
+                end
+            end)
+            if not success then
+                Rayfield:Notify({ Title = "JERK OFF", Content = "Ошибка: " .. tostring(err), Duration = 5 })
+            end
+        end)
+    end
+})
+
 LobbyTab:CreateButton({ Name = "ТП в Лобби (Закрыто)", Callback = function() Rayfield:Notify({ Title = "ЛОББИ", Content = "На доработке.", Duration = 5 }) end })
 LobbyTab:CreateButton({ Name = "Спам Прыжками", Callback = function() local char = LocalPlayer.Character; if char then local hum = char:FindFirstChild("Humanoid"); if hum then for i = 1, 20 do hum.Jump = true task.wait(0.1) end end end end })
-LobbyTab:CreateButton({ Name = "Jerk Off (Закрыто)", Callback = function() Rayfield:Notify({ Title = "JERK OFF", Content = "Отключено.", Duration = 5 }) end })
 
--- МЕГА-МОЛИТВА С ВЫБОРОМ
+-- МЕГА-МОЛИТВА
 LobbyTab:CreateButton({
     Name = "🙏 КОНТРАКТ С РАЙЗЕНОМ (Выбор)",
     Callback = function()
@@ -246,13 +210,13 @@ LobbyTab:CreateButton({
             forgiveGui.Name = "ForgiveGui"
             forgiveGui.ResetOnSpawn = false
             forgiveGui.Parent = LocalPlayer:WaitForChild("PlayerGui")
-            
+
             local forgiveFrame = Instance.new("Frame")
             forgiveFrame.Size = UDim2.new(1, 0, 1, 0)
             forgiveFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             forgiveFrame.BackgroundTransparency = 0.1
             forgiveFrame.Parent = forgiveGui
-            
+
             local forgiveText = Instance.new("TextLabel")
             forgiveText.Size = UDim2.new(0.9, 0, 0.6, 0)
             forgiveText.Position = UDim2.new(0.05, 0, 0.2, 0)
@@ -262,7 +226,7 @@ LobbyTab:CreateButton({
             forgiveText.TextColor3 = Color3.fromRGB(255, 215, 0)
             forgiveText.Text = "О, ВЕЛИКИЙ РАЙЗЕН И DFGGHH500 ПРОСТЯТ ТЕБЯ!\n\nТЫ ПОДПИСАЛ КОНТРАКТ."
             forgiveText.Parent = forgiveFrame
-            
+
             task.wait(10)
             forgiveGui:Destroy()
         end)
@@ -277,28 +241,13 @@ LobbyTab:CreateButton({
 -- ТАНЦЫ
 LobbyTab:CreateButton({ Name = "Танец 1 (R15)", Callback = function() local char = LocalPlayer.Character; if char then local hum = char:FindFirstChild("Humanoid"); if hum and hum.RigType == Enum.HumanoidRigType.R15 then local anim = Instance.new("Animation"); anim.AnimationId = "rbxassetid://507771019"; local track = hum:FindFirstChildOfClass("Animator"):LoadAnimation(anim); track:Play(); task.wait(5); track:Stop(); end end end })
 LobbyTab:CreateButton({ Name = "Танец 2 (R15)", Callback = function() local char = LocalPlayer.Character; if char then local hum = char:FindFirstChild("Humanoid"); if hum and hum.RigType == Enum.HumanoidRigType.R15 then local anim = Instance.new("Animation"); anim.AnimationId = "rbxassetid://507770453"; local track = hum:FindFirstChildOfClass("Animator"):LoadAnimation(anim); track:Play(); task.wait(5); track:Stop(); end end end })
-LobbyTab:CreateButton({ Name = "Танец 3 (R15)", Callback = function() local char = LocalPlayer.Character; if char then local hum = char:FindFirstChild("Humanoid"); if hum and hum.RigType == Enum.HumanoidRigType.R15 then local anim = Instance.new("Animation"); anim.AnimationId = "rbxassetid://507770818"; local track = hum:FindFirstChildOfClass("Animator"):LoadAnimation(anim); track:Play(); task.wait(5); track:Stop(); end end end })
 
 -- ============================================================
--- 10. РАЗВЛЕЧЕНИЯ (ПОМИДОР)
+-- 10. РАЗВЛЕЧЕНИЯ
 -- ============================================================
 local FunTab = Window:CreateTab("🎉 РАЗВЛЕЧЕНИЯ", 4483345998)
-
 FunTab:CreateButton({ Name = "Прыжок в Космос", Callback = function() local char = LocalPlayer.Character; if char and char:FindFirstChild("HumanoidRootPart") then char.HumanoidRootPart.Velocity = Vector3.new(0, 500, 0); Rayfield:Notify({ Title = "КОСМОС", Content = "Ты летишь!", Duration = 3 }); end end })
-
--- ПЕРЕИМЕНОВАННАЯ КНОПКА
-FunTab:CreateButton({ Name = "Сделать тебя ебучим помидором", Callback = function()
-    local char = LocalPlayer.Character
-    if char then
-        for _, v in pairs(char:GetDescendants()) do
-            if v:IsA("BasePart") then
-                v.Color = Color3.fromRGB(255, 0, 0) -- Красный
-                v.Material = Enum.Material.SmoothPlastic
-            end
-        end
-        Rayfield:Notify({ Title = "ПОМИДОР", Content = "Ты ебучий помидор!", Duration = 3 })
-    end
-end })
+FunTab:CreateButton({ Name = "Сделать тебя ебучим помидором", Callback = function() local char = LocalPlayer.Character; if char then for _, v in pairs(char:GetDescendants()) do if v:IsA("BasePart") then v.Color = Color3.fromRGB(255, 0, 0); v.Material = Enum.Material.SmoothPlastic end end Rayfield:Notify({ Title = "ПОМИДОР", Content = "Ты ебучий помидор!", Duration = 3 }) end end })
 
 -- ============================================================
 -- 11. ССЫЛКИ
@@ -314,4 +263,4 @@ Window:OnClose(function()
 end)
 
 Rayfield:LoadConfiguration()
-print("[RYZEN LIBRARY V7.6]: TOMATO & SHADERS Loaded.")
+print("[RYZEN LIBRARY V8.1]: FULL TEXT + JERK OFF Loaded.")
