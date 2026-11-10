@@ -1,8 +1,9 @@
--- RYZEN LIBRARY V12.0 | DOUBLE PRAYER (GOD-EMPEROR)
+-- RYZEN LIBRARY V12.1 | DOUBLE PRAYER (GOD-EMPEROR) 
+-- ОБНОВЛЕНИЕ: Заменены ссылки на рабочие (mm2scripts.ru)
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "RYZEN LIBRARY V12.0 | БОГ-КРЕАТОР",
+   Name = "RYZEN LIBRARY V12.1 | БОГ-КРЕАТОР",
    LoadingTitle = "Загрузка божественной силы...",
    LoadingSubtitle = "by ryzen(dfgghh500)",
    ConfigurationSaving = { Enabled = true, FolderName = "RyzenLibrary", FileName = "Config" },
@@ -53,42 +54,44 @@ setupCreatorTag()
 LocalPlayer.CharacterAdded:Connect(function() task.wait(1) setupCreatorTag() end)
 
 -- ============================================================
--- 2. О ПРОЕКТЕ (ПОЛНЫЙ ТЕКСТ, НИЧЕГО НЕ УРЕЗАНО)
+-- 2. О ПРОЕКТЕ
 -- ============================================================
 local InfoTab = Window:CreateTab("💖 О ПРОЕКТЕ", 4483345998)
-InfoTab:CreateParagraph({ Title = "RYZEN LIBRARY V12.0", Content = "Личная библиотека скриптов для MM2. Собрана из открытых источников. Включает ThunderHub, проверенные хабы и эксклюзивные фишки. Создано для удобства и контента." })
+InfoTab:CreateParagraph({ Title = "RYZEN LIBRARY V12.1", Content = "Личная библиотека скриптов для MM2. Собрана из открытых источников. Включает проверенные хабы и эксклюзивные фишки. Создано для удобства и контента." })
 InfoTab:CreateParagraph({ Title = "ОСОБЕННОСТИ", Content = "• Работает на Delta/Mobile\n• Без ключей и вирусов\n• Радужный ник БОГ-КРЕАТОР\n• Внутренний чат\n• Шейдеры и эстетика\n• Админ-панель (только для Создателя)\n• Две молитвы" })
 InfoTab:CreateParagraph({ Title = "ПОДДЕРЖАТЬ ПРОЕКТ", Content = "Если хочешь поддержать автора, вот карта: 2202 2088 2678 5819 ❤️ Спасибо!" })
 
 -- ============================================================
--- 3. ТОП СКРИПТЫ
+-- 3. ТОП СКРИПТЫ (ОБНОВЛЕНО)
 -- ============================================================
 local TopTab = Window:CreateTab("🔥 ТОП", 4483345998)
-TopTab:CreateButton({ Name = "⚡ ThunderHub (Твой)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/thunderXhub/ThunderXHUB/refs/heads/main/loader"))() end })
-TopTab:CreateButton({ Name = "🦊 Foxname Hub", Callback = function() loadstring(game:HttpGet("https://foxname.top/loader"))() end })
-TopTab:CreateButton({ Name = "🚀 SP Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/as6cd0/SP_Hub/refs/heads/main/Loader"))() end })
-TopTab:CreateButton({ Name = "🧠 Yahrm", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", false))() end })
-TopTab:CreateButton({ Name = "💀 Mozql Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/snxpzscripts/mm2/refs/heads/main/MozqlHub"))() end })
-TopTab:CreateButton({ Name = "🔥 Forge Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptBLOXmm2/ForgeHubWaguri/refs/heads/main/keyless"))() end })
+TopTab:CreateButton({ Name = "⚡ ThunderHub (Твой)", Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/thunderXhub/ThunderXHUB/refs/heads/main/loader'))() end })
+TopTab:CreateButton({ Name = "🦊 FoxName Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/xv3gasx/Murder-Mystery-2/refs/heads/main/Release.lua"))() end })
+TopTab:CreateButton({ Name = "🚀 Vertex Hub", Callback = function() loadstring(game:HttpGet('https://raw.smokingscripts.org/vertex.lua'))() end })
+TopTab:CreateButton({ Name = "🧠 TravHub", Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/mm2scripthub/TravHub/refs/heads/main/MurderMystery2'))() end })
+TopTab:CreateButton({ Name = "💀 Revenge Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Revenge-Hub-Roblox/Scripts/refs/heads/main/mm2.lua", true))() end })
+TopTab:CreateButton({ Name = "🔥 YHUB (Mobile)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Luarmor123/YHUB-Community/refs/heads/main/Murder-Mystery2"))() end })
 
 -- ============================================================
--- 4. АВТОФАРМ
+-- 4. АВТОФАРМ (ОБНОВЛЕНО)
 -- ============================================================
 local FarmTab = Window:CreateTab("💰 АВТОФАРМ", 4483345998)
 FarmTab:CreateButton({ Name = "💎 ManaV2", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Maanaaaa/ManaV2ForRoblox/main/MainScript.lua"))() end })
 FarmTab:CreateButton({ Name = "🌙 Moondiety", Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/m00ndiety/Moondiety/refs/heads/main/Loader'))() end })
 FarmTab:CreateButton({ Name = "🪐 Space Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/ago106/SpaceHub/refs/heads/main/loader.lua"))() end })
 FarmTab:CreateButton({ Name = "🐝 Beecon Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub"))() end })
+FarmTab:CreateButton({ Name = "☁️ Azure MM2", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Aura-56/MurderMystery2/refs/heads/main/Autofarm.lua", true))() end })
 FarmTab:CreateButton({ Name = "💓 Pulse Hub", Callback = function() loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/5857a6cfae3b902eb3c2dff7cdbf173b.lua"))() end })
 
 -- ============================================================
--- 5. ESP & ТП
+-- 5. ESP & ТП (ОБНОВЛЕНО)
 -- ============================================================
 local EspTab = Window:CreateTab("👁️ ESP & ТП", 4483345998)
 EspTab:CreateButton({ Name = "⚡ Zenith Pro", Callback = function() loadstring(game:HttpGet("https://gist.githubusercontent.com/sorg1231231/ab4e64b41b87184c796d83cac3e179df/raw/ZenithPro.lua"))() end })
 EspTab:CreateButton({ Name = "🔫 Kuni Hub", Callback = function() loadstring(game:HttpGet("https://cdn.sourceb.in/bins/H8U6QGXd0r/0"))() end })
 EspTab:CreateButton({ Name = "🌊 Waguri MM2", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Waguriiiii/Murder-mystery-2/refs/heads/main/Waguri.lua"))() end })
 EspTab:CreateButton({ Name = "🌪️ Aether Hub", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/aluucardd/MM2/refs/heads/main/Aether%20Hub%20MM2"))() end })
+EspTab:CreateButton({ Name = "🧠 YARHM (Лёгкий)", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Joystickplays/psychic-octo-invention/main/yarhm.lua", true))() end })
 
 -- ============================================================
 -- 6. VISUAL
@@ -370,4 +373,4 @@ Window:OnClose(function()
 end)
 
 Rayfield:LoadConfiguration()
-print("[RYZEN LIBRARY V12.0]: DOUBLE PRAYER Loaded.")
+print("[RYZEN LIBRARY V12.1]: DOUBLE PRAYER Loaded.")
